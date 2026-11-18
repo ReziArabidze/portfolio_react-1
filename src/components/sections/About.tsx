@@ -84,7 +84,7 @@ export const About: React.FC<AboutProps> = ({ personalInfo }) => {
 
           <div className="about-cv-button">
             <Button
-              href="#contact"
+              href="index.html#contact"
               variant="outline"
               size="sm"
               icon={<Icon name="arrow-right" size={16} />}

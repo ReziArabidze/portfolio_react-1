@@ -17,7 +17,7 @@ export const Footer: React.FC<FooterProps> = ({ personalInfo }) => {
     <footer className="footer-container">
       <div className="footer-top">
         <div className="footer-brand">
-          <a href="#hero" className="footer-logo">
+          <a href="index.html" className="footer-logo">
             <span className="logo-icon">
               <Icon name="code" size={20} />
             </span>
@@ -34,12 +34,14 @@ export const Footer: React.FC<FooterProps> = ({ personalInfo }) => {
         <div className="footer-links-group">
           <h4 className="footer-heading">ნავიგაცია</h4>
           <ul className="footer-links">
-            <li><a href="#hero">მთავარი</a></li>
-            <li><a href="#about">ჩემ შესახებ</a></li>
-            <li><a href="#services">სერვისები</a></li>
-            <li><a href="#skills">უნარები</a></li>
-            <li><a href="#projects">პროექტები</a></li>
-            <li><a href="#contact">კონტაქტი</a></li>
+            <li><a href="index.html">მთავარი</a></li>
+            <li><a href="about.html">ჩემ შესახებ</a></li>
+            <li><a href="services.html">სერვისები</a></li>
+            <li><a href="skills.html">უნარები</a></li>
+            <li><a href="projects.html">პროექტები</a></li>
+            <li><a href="users.html">მომხმარებლები (API)</a></li>
+            <li><a href="experience.html">გამოცდილება</a></li>
+            <li><a href="index.html#contact">კონტაქტი</a></li>
           </ul>
         </div>
 

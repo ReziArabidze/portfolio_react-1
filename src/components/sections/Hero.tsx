@@ -34,7 +34,7 @@ export const Hero: React.FC<HeroProps> = ({ personalInfo, stats }) => {
         {/* Action Buttons */}
         <div className="hero-actions">
           <Button
-            href="#projects"
+            href="projects.html"
             variant="primary"
             size="lg"
             icon={<Icon name="arrow-right" size={18} />}

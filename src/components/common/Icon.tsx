@@ -19,6 +19,7 @@ export type IconName =
   | 'zap'
   | 'check'
   | 'arrow-right'
+  | 'arrow-left'
   | 'menu'
   | 'close'
   | 'chevron-up'
@@ -30,7 +31,12 @@ export type IconName =
   | 'twitter'
   | 'sun'
   | 'moon'
-  | 'copy';
+  | 'copy'
+  | 'search'
+  | 'user'
+  | 'users'
+  | 'refresh'
+  | 'building';
 
 interface IconProps {
   name: IconName | string;
@@ -281,6 +287,55 @@ export const Icon: React.FC<IconProps> = ({ name, size = 20, className = '' }) =
         <svg {...props}>
           <rect width="14" height="14" x="8" y="8" rx="2" ry="2" />
           <path d="M4 16c-1.1 0-2-.9-2-2V4c0-1.1.9-2 2-2h10c1.1 0 2 .9 2 2" />
+        </svg>
+      );
+    case 'arrow-left':
+      return (
+        <svg {...props}>
+          <line x1="19" y1="12" x2="5" y2="12" />
+          <polyline points="12 19 5 12 12 5" />
+        </svg>
+      );
+    case 'search':
+      return (
+        <svg {...props}>
+          <circle cx="11" cy="11" r="8" />
+          <line x1="21" y1="21" x2="16.65" y2="16.65" />
+        </svg>
+      );
+    case 'user':
+      return (
+        <svg {...props}>
+          <path d="M19 21v-2a4 4 0 0 0-4-4H9a4 4 0 0 0-4 4v2" />
+          <circle cx="12" cy="7" r="4" />
+        </svg>
+      );
+    case 'users':
+      return (
+        <svg {...props}>
+          <path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2" />
+          <circle cx="9" cy="7" r="4" />
+          <path d="M22 21v-2a4 4 0 0 0-3-3.87" />
+          <path d="M16 3.13a4 4 0 0 1 0 7.75" />
+        </svg>
+      );
+    case 'refresh':
+      return (
+        <svg {...props}>
+          <polyline points="23 4 23 10 17 10" />
+          <path d="M20.49 15a9 9 0 1 1-2.12-9.36L23 10" />
+        </svg>
+      );
+    case 'building':
+      return (
+        <svg {...props}>
+          <rect width="16" height="20" x="4" y="2" rx="2" />
+          <line x1="9" y1="6" x2="9.01" y2="6" />
+          <line x1="15" y1="6" x2="15.01" y2="6" />
+          <line x1="9" y1="10" x2="9.01" y2="10" />
+          <line x1="15" y1="10" x2="15.01" y2="10" />
+          <line x1="9" y1="14" x2="9.01" y2="14" />
+          <line x1="15" y1="14" x2="15.01" y2="14" />
         </svg>
       );
     default:

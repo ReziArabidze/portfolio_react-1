@@ -1,32 +1,37 @@
-# React + TypeScript + Vite
+# React Multi-Page Portfolio & REST API Project
 
-This template provides a minimal setup to get React working in Vite with HMR and some Oxlint rules.
+სრული Multi-Page Application (MPA) არქიტექტურით აგებული თანამედროვე პორტფოლიოს პროექტი (React 19, TypeScript, Vite MPA).
 
-Currently, two official plugins are available:
+## 📄 პროექტის HTML გვერდები
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+თითოეული სექცია გამოტანილია თავის დამოუკიდებელ HTML ფაილში:
 
-## React Compiler
+1. **[index.html](file:///c:/Users/Zura/Desktop/fullstack/node/portfolio_react-1/index.html)** — მთავარი გვერდი (Hero, სექციების კატალოგი/Explorer Hub, Contact & Footer)
+2. **[about.html](file:///c:/Users/Zura/Desktop/fullstack/node/portfolio_react-1/about.html)** — ჩემ შესახებ (ბიოგრაფია, პერსონალური მონაცემები, სტატისტიკა)
+3. **[services.html](file:///c:/Users/Zura/Desktop/fullstack/node/portfolio_react-1/services.html)** — სერვისები (Full Stack, Frontend, UI/UX გადაწყვეტები)
+4. **[skills.html](file:///c:/Users/Zura/Desktop/fullstack/node/portfolio_react-1/skills.html)** — უნარები (ტექნოლოგიური სტეკი დონეებითა და კატეგორიებით)
+5. **[projects.html](file:///c:/Users/Zura/Desktop/fullstack/node/portfolio_react-1/projects.html)** — პროექტები (კატეგორიების ფილტრი, ცოცხალი ძებნა და მოდალი)
+6. **[experience.html](file:///c:/Users/Zura/Desktop/fullstack/node/portfolio_react-1/experience.html)** — სამუშაო გამოცდილება (კარიერული თაიმლაინი და მიღწევები)
+7. **[users.html](file:///c:/Users/Zura/Desktop/fullstack/node/portfolio_react-1/users.html)** — მომხმარებლები (JSONPlaceholder REST API, ძებნა, სორტირება და მოდალი)
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+## 🧭 ერთიანი ნავიგაცია (Navbar)
 
-## Expanding the Oxlint configuration
+- **ავტომატური აქტიური გვერდის ინდიკატორი**: ნავიგაციის ზოლი ავტომატურად ცნობს, რომელ `.html` გვერდზე იმყოფება მომხმარებელი და უნთებს მანათობელ ხაზს.
+- **პირდაპირი გადასვლები**: ნებისმიერი გვერდიდან ნებისმიერ სხვა გვერდზე გადასვლა ხდება პირდაპირი ბმულით (`about.html`, `projects.html` და ა.შ.).
+- **მობილური მენიუ**: Glassmorphism ეფექტით, ბექდროპით, ავტომატური დახურვითა და სრული რესპონსიულობით.
 
-If you are developing a production application, we recommend enabling type-aware lint rules by installing `oxlint-tsgolint` and editing `.oxlintrc.json`:
+## 💻 გაშვების ბრძანებები
 
-```json
-{
-  "$schema": "./node_modules/oxlint/configuration_schema.json",
-  "plugins": ["react", "typescript", "oxc"],
-  "options": {
-    "typeAware": true
-  },
-  "rules": {
-    "react/rules-of-hooks": "error",
-    "react/only-export-components": ["warn", { "allowConstantExport": true }]
-  }
-}
+```bash
+# დამოკიდებულებების ინსტალაცია
+npm install
+
+# დეველოპმენტ სერვერის გაშვება (Vite)
+npm run dev
+
+# პროექტის აწყობა — ქმნის 7-ვე ცალკეულ HTML ფაილს dist საქაღალდეში
+npm run build
+
+# კოდის ხარისხის შემოწმება (Oxlint)
+npm run lint
 ```
-
-See the [Oxlint rules documentation](https://oxc.rs/docs/guide/usage/linter/rules) for the full list of rules and categories.
